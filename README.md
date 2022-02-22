@@ -1,1 +1,2 @@
-# dlmdsede02-data-engineering-project
+# DLMDSEDE02 Data Engineering - Project
+This source code implements a large-scale and data-intensive application for real-time streaming processing. The streaming pipeline consists of Apache Kafka, Apache Spark, Telegraf, and Grafana. With the use of Docker, the solution stack is assembled with isolated microservices orchestrated by Infrastructure as Code. The implementation ensures reliability, scalability, and maintainability as well as data security, governance, and protection. As example use case, a Twitter dataset about the 2020 United States presidential election is processed and analytically prepared for visualization in a dashboard.
