@@ -8,9 +8,9 @@ services:
     ports:
       - '2181:2181'
   
-  kafka:
+  kafka-server:
     image: 'bitnami/kafka:3.1.0'
-    container_name: kafka
+    container_name: kafka-server
     ports:
       - '9092:9092'
     environment:
@@ -21,3 +21,10 @@ services:
       - ALLOW_PLAINTEXT_LISTENER=yes
     depends_on:
       - zookeeper
+
+  kafka-clock-producer:
+    build: ./kafka/
+    image: kafka:latest
+    container_name: kafka-clock-producer
+    depends_on:
+      - kafka-server
